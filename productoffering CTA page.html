@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microDOS(2) | Precision Psychedelics, Simplified</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19; /* A slightly deeper dark blue */
+            color: #cbd5e1; /* Slate 300 */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #818cf8, #c084fc); /* Indigo-300 to Purple-400 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo-500 to Purple-600 */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -5px rgba(168, 85, 247, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px -8px rgba(168, 85, 247, 0.6);
+        }
+        .btn-secondary {
+            background-color: rgba(55, 65, 81, 0.5); /* Gray 700 with transparency */
+            border: 1px solid #4b5563; /* Gray 600 */
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #374151; /* Gray 700 */
+            border-color: #6d28d9; /* Violet 700 */
+        }
+        .card-bg {
+            background-color: rgba(30, 41, 59, 0.6); /* Slate 800 with transparency */
+            border: 1px solid #374151; /* Slate 700 */
+            backdrop-filter: blur(10px);
+        }
+        .pricing-card-highlight {
+            border-color: #a855f7; /* Purple 600 */
+            box-shadow: 0 0 30px -10px rgba(168, 85, 247, 0.5);
+        }
+        .neon-glow {
+            filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));
+        }
+        .section-title {
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+        /* Animation for fade-in effect on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 z-50 bg-slate-900/60 backdrop-blur-lg border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">microDOS<span class="gradient-text">(2)</span></div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#benefits" class="text-slate-300 hover:text-white transition-colors">Benefits</a>
+                <a href="#dosage" class="text-slate-300 hover:text-white transition-colors">Dosage</a>
+                <a href="#pricing" class="text-slate-300 hover:text-white transition-colors">Pricing</a>
+                <a href="#studies" class="text-slate-300 hover:text-white transition-colors">Research</a>
+                <a href="#cta" class="px-5 py-2.5 text-white font-semibold rounded-lg shadow-md btn-primary">
+                    Start Trial
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#benefits" class="block text-slate-300 hover:text-white py-2">Benefits</a>
+            <a href="#dosage" class="block text-slate-300 hover:text-white py-2">Dosage</a>
+            <a href="#pricing" class="block text-slate-300 hover:text-white py-2">Pricing</a>
+            <a href="#studies" class="block text-slate-300 hover:text-white py-2">Research</a>
+            <a href="#cta" class="block mt-2 w-full text-center px-6 py-3 text-white font-semibold rounded-lg shadow-md btn-primary">
+                Start Trial
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Cover Page / Hero Section -->
+        <section id="home" class="py-24 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-6 text-center relative">
+                <!-- Background Glow -->
+                <div class="absolute -top-1/4 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-purple-600/20 rounded-full blur-3xl -z-10"></div>
+                
+                <h1 class="text-5xl md:text-7xl section-title text-white mb-4">microDOS<span class="gradient-text">(2)</span></h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8">Precision Psychedelics, Simplified.</p>
+                
+                <!-- Hero Visual: Stylized Pill -->
+                <div class="my-12 flex justify-center neon-glow">
+                    <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="pillGradient" x1="0" y1="0" x2="120" y2="60">
+                                <stop stop-color="#818cf8"/>
+                                <stop offset="1" stop-color="#c084fc"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="120" height="60" rx="30" fill="url(#pillGradient)"/>
+                        <line x1="60" y1="5" x2="60" y2="55" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
+                    </svg>
+                </div>
+                
+                <a href="#cta" class="w-full sm:w-auto inline-block px-8 py-4 text-lg text-white font-bold rounded-lg shadow-lg btn-primary">
+                    Explore Microdosing with Metocin
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Product Overview Section -->
+        <section id="product" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl section-title text-white mb-4">Pure, Consistent, Clear.</h2>
+                    <p class="text-lg text-slate-400 mb-6">
+                        <strong class="text-white">microDOS(2)</strong> is a pharmaceutical-grade tryptamine formulation for sub-perceptual dosing. Each pure, scored tablet contains <strong class="text-white">2mg of Metocin (4-HO-MET)</strong>, ensuring unparalleled consistency for enhanced clarity, creativity, and focus.
+                    </p>
+                    <p class="text-slate-400">Each tablet is comparable to ~500mg of dried mushrooms.</p>
+                </div>
+                <div class="flex justify-center items-center space-x-4">
+                    <!-- Scored Pill Visual -->
+                    <svg width="200" height="100" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="100" rx="50" fill="#374151"/>
+                        <line x1="100" y1="10" x2="100" y2="90" stroke="#9ca3af" stroke-width="3" stroke-dasharray="6 6"/>
+                        <line x1="20" y1="50" x2="180" y2="50" stroke="#9ca3af" stroke-width="3" stroke-dasharray="6 6"/>
+                        <text x="50" y="56" font-family="Inter, sans-serif" font-size="20" fill="#cbd5e1" text-anchor="middle">1/4</text>
+                        <text x="150" y="56" font-family="Inter, sans-serif" font-size="20" fill="#cbd5e1" text-anchor="middle">1/4</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Benefits Section -->
+        <section id="benefits" class="py-20 bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl section-title text-white">The microDOS Advantage</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Benefit Card 1 -->
+                    <div class="text-center p-6 card-bg rounded-xl">
+                        <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-500/20 text-indigo-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Rapid Onset</h3>
+                        <p class="text-slate-400">Effects in ~10 minutes for predictable, manageable sessions.</p>
+                    </div>
+                    <!-- Benefit Card 2 -->
+                    <div class="text-center p-6 card-bg rounded-xl">
+                        <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-purple-500/20 text-purple-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Precision Dosage</h3>
+                        <p class="text-slate-400">2mg scored tablets for reliable, consistent microdosing.</p>
+                    </div>
+                    <!-- Benefit Card 3 -->
+                    <div class="text-center p-6 card-bg rounded-xl">
+                        <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-sky-500/20 text-sky-300">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.224a2 2 0 00.174 2.573V10h4z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">No Nausea</h3>
+                        <p class="text-slate-400">Clean formula avoids the discomfort of raw mushrooms.</p>
+                    </div>
+                    <!-- Benefit Card 4 -->
+                    <div class="text-center p-6 card-bg rounded-xl">
+                        <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-emerald-500/20 text-emerald-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Legal & Discreet</h3>
+                        <p class="text-slate-400">Not federally scheduled. Shipped plainly to all 50 states.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Dosage Guide -->
+        <section id="dosage" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl section-title text-white mb-4">Find Your Perfect Dose</h2>
+                    <p class="text-lg text-slate-400">Our scored tablets make it easy to find the right dose for your needs, from sub-perceptual focus to a noticeable creative lift.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Quarter Tablet -->
+                    <div class="card-bg rounded-xl p-8 text-center">
+                        <svg class="mx-auto mb-4" width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 0C22.3858 0 0 22.3858 0 50H50V0Z" fill="#818cf8"/>
+                            <path d="M50 0C77.6142 0 100 22.3858 100 50H50V0Z" fill="#475569"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-white">Quarter Tablet</h3>
+                        <p class="font-semibold gradient-text mb-2">0.5mg Metocin</p>
+                        <p class="text-slate-400 mb-4">(~125mg shrooms)</p>
+                        <p class="text-slate-300">A sub-perceptual dose ideal for beginners, boosting focus and energy without noticeable psychoactive effects.</p>
+                    </div>
+                    <!-- Half Tablet -->
+                    <div class="card-bg rounded-xl p-8 text-center border-2 border-purple-600/80 shadow-lg shadow-purple-600/10">
+                         <svg class="mx-auto mb-4" width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 0C22.3858 0 0 22.3858 0 50V0H50Z" fill="#a855f7"/>
+                            <path d="M50 0C77.6142 0 100 22.3858 100 50V0H50Z" fill="#475569"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-white">Half Tablet</h3>
+                        <p class="font-semibold gradient-text mb-2">1.0mg Metocin</p>
+                        <p class="text-slate-400 mb-4">(~250mg shrooms)</p>
+                        <p class="text-slate-300">The standard microdose for a noticeable creative and mood lift. Perfect for brainstorming or appreciating art.</p>
+                    </div>
+                    <!-- Full Tablet -->
+                    <div class="card-bg rounded-xl p-8 text-center">
+                        <svg class="mx-auto mb-4" width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect width="100" height="50" rx="25" fill="#c084fc"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-white">Full Tablet</h3>
+                        <p class="font-semibold gradient-text mb-2">2.0mg Metocin</p>
+                        <p class="text-slate-400 mb-4">(~500mg shrooms)</p>
+                        <p class="text-slate-300">A "recreational" microdose. Expect enhanced senses and a significant boost in creative thinking. Not for a typical workday.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. User Experiences -->
+        <section id="reviews" class="py-20 bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl section-title text-white mb-4">Real Stories. Real Clarity.</h2>
+                    <p class="text-lg text-slate-400">Professionals, artists, and thinkers are using microDOS(2) to cut through the noise and find their flow.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Story 1 -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col">
+                        <blockquote class="text-slate-300 italic text-lg mb-4 flex-grow">"It quieted the noise, allowing me to hear my own instincts, to trust my own talent."</blockquote>
+                        <p class="font-bold text-white text-right">- Jalen, Pro Athlete</p>
+                    </div>
+                    <!-- Story 2 -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col">
+                        <blockquote class="text-slate-300 italic text-lg mb-4 flex-grow">"The anxiety receded, leaving a quiet space. I saw the project not as a tangled mess, but as a system of interconnected parts."</blockquote>
+                        <p class="font-bold text-white text-right">- Eleanor, Project Manager</p>
+                    </div>
+                    <!-- Story 3 -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col">
+                        <blockquote class="text-slate-300 italic text-lg mb-4 flex-grow">"The creative voice I thought I had lost had just been speaking too quietly. This was the amplifier."</blockquote>
+                        <p class="font-bold text-white text-right">- Joe, Designer</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#cta" class="btn-secondary text-white font-semibold px-8 py-3 rounded-lg">
+                        Scan QR Code for More Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pricing Plans -->
+        <section id="pricing" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl section-title text-white mb-4">Find Your Flow State</h2>
+                    <p class="text-lg text-slate-400">Start with a trial, make a one-time purchase, or subscribe for the best value. Cancel or adjust anytime.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                    
+                    <!-- Trial Pack -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white">Trial Pack</h3>
+                        <p class="text-slate-400 mb-6">A perfect introduction.</p>
+                        <div class="my-4">
+                            <span class="text-5xl font-extrabold text-white">$14.95</span>
+                            <span class="text-slate-400">/ one-time</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 mb-8">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>3 Pills</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Free Shipping</li>
+                        </ul>
+                        <a href="#cta" class="w-full mt-auto btn-secondary text-white font-semibold text-center px-6 py-3 rounded-lg">Start My Trial</a>
+                    </div>
+
+                    <!-- Monthly Subscription -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col pricing-card-highlight lg:scale-105">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-2xl font-bold text-white">Monthly Subscription</h3>
+                            <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">BEST VALUE</span>
+                        </div>
+                        <p class="text-purple-300 mb-6">Save 10% with automatic refills.</p>
+                        <div class="space-y-4 flex-grow flex flex-col">
+                            <div class="bg-slate-700/50 p-4 rounded-lg flex-grow">
+                                <p class="font-bold text-white">10 Pills / mo</p>
+                                <p><span class="text-2xl font-bold text-white">$51.75</span> <span class="text-slate-400 text-sm">($5.18/pill)</span></p>
+                            </div>
+                            <div class="bg-slate-700/50 p-4 rounded-lg flex-grow">
+                                <p class="font-bold text-white">15 Pills / mo</p>
+                                <p><span class="text-2xl font-bold text-white">$74.25</span> <span class="text-slate-400 text-sm">($4.95/pill)</span></p>
+                            </div>
+                            <div class="bg-slate-700/50 p-4 rounded-lg flex-grow">
+                                <p class="font-bold text-white">30 Pills / mo</p>
+                                <p><span class="text-2xl font-bold text-white">$141.75</span> <span class="text-slate-400 text-sm">($4.73/pill)</span></p>
+                            </div>
+                        </div>
+                        <a href="#cta" class="w-full mt-8 btn-primary text-white font-semibold text-center px-6 py-3 rounded-lg">Choose Subscription</a>
+                    </div>
+                    
+                    <!-- One-Time Purchase -->
+                    <div class="card-bg rounded-xl p-8 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white">One-Time Purchase</h3>
+                        <p class="text-slate-400 mb-6">No commitment. Pay as you go.</p>
+                        <div class="space-y-4 flex-grow flex flex-col">
+                            <div class="bg-slate-800/80 p-3 rounded-lg flex-grow">
+                                <p class="font-semibold text-white">3 Pills - $21.95 <span class="text-slate-400 text-sm">($7.32/pill)</span></p>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-lg flex-grow">
+                                <p class="font-semibold text-white">10 Pills - $57.50 <span class="text-slate-400 text-sm">($5.75/pill)</span></p>
+                            </div>
+                             <div class="bg-slate-800/80 p-3 rounded-lg flex-grow">
+                                <p class="font-semibold text-white">15 Pills - $82.50 <span class="text-slate-400 text-sm">($5.50/pill)</span></p>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-lg flex-grow">
+                                <p class="font-semibold text-white">30 Pills - $157.50 <span class="text-slate-400 text-sm">($5.25/pill)</span></p>
+                            </div>
+                        </div>
+                         <a href="#cta" class="w-full mt-8 btn-secondary text-white font-semibold text-center px-6 py-3 rounded-lg">Select Purchase</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Scientific Studies -->
+        <section id="studies" class="py-20 bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl section-title text-white mb-4">Backed by Research</h2>
+                    <p class="text-lg text-slate-400">Microdosing is an emerging area of study with promising findings.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="card-bg rounded-lg p-6">
+                        <p class="font-semibold text-white">
+                            <a href="https://www.nature.com/articles/s41598-022-14512-3" target="_blank" class="text-purple-300 hover:underline">Scientific Reports (2022)</a> & 
+                            <a href="https://www.nature.com/articles/s41598-021-01811-4" target="_blank" class="text-purple-300 hover:underline"> (2021)</a>
+                        </p>
+                        <p class="text-slate-400">Studies found microdosers report health motivations and show greater improvements in mood and mental health compared to non-microdosing controls.</p>
+                    </div>
+                     <div class="card-bg rounded-lg p-6">
+                        <p class="font-semibold text-white">
+                            <a href="https://harmreductionjournal.biomedcentral.com/articles/10.1186/s12954-019-0308-4" target="_blank" class="text-purple-300 hover:underline">Harm Reduction Journal (2019)</a> & 
+                            <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0211023" target="_blank" class="text-purple-300 hover:underline">PLOS One (2019)</a>
+                        </p>
+                        <p class="text-slate-400">Research highlights benefits like improved mood and well-being, while also noting challenges, creating a balanced view of the practice.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="ARTICLESANDSTUDIES.html" target="_blank" class="btn-secondary text-white font-semibold px-6 py-3 rounded-lg">See Full List of Studies</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Back Page / Final CTA -->
+        <section id="cta" class="py-24 fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl section-title text-white mb-6">Ready to Try microDOS(2)?</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">Experience the clarity and focus you've been looking for. Start with our risk-free trial pack today.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#cta" class="w-full sm:w-auto px-8 py-4 text-lg text-white font-bold rounded-lg shadow-lg btn-primary">
+                        Start Your Trial
+                    </a>
+                    <a href="#benefits" class="w-full sm:w-auto px-8 py-4 text-lg font-semibold text-white btn-secondary rounded-lg">
+                        Learn More
+                    </a>
+                </div>
+                 <div class="mt-16 flex flex-col items-center">
+                    <p class="text-slate-400 mb-4">Scan Code for ordering and more information.</p>
+                    <div class="bg-white p-2 rounded-lg inline-block">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=QR+CODE" alt="QR Code to order page" class="block">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <!-- 8. Legal & Safety Notice -->
+            <div class="max-w-4xl mx-auto mb-8 p-4 border border-yellow-500/30 bg-yellow-500/10 rounded-lg text-yellow-200 text-sm">
+                <strong class="font-bold">⚠️ Important Safety Notice:</strong> Overconsumption may cause intense visuals and hallucinations. Intended for adults 21+. Use responsibly. Statements not evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+            </div>
+            
+            <div class="text-2xl font-bold text-white mb-2">microDOS<span class="gradient-text">(2)</span></div>
+            <p class="text-slate-400 mb-6">microdos2.github.io</p>
+            <p class="text-slate-500 text-sm">&copy; 2024 microDOS(2) Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
+</body>
+</html>
